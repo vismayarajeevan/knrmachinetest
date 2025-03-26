@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Card } from 'react-bootstrap'
 import { deleteProduct } from '../services/allAPI'
+import Edit from './Edit'
 
 
 
@@ -39,8 +40,7 @@ const View = ({allProducts,getAllProducts}) => {
         <p style={{color:'red'}}>gst: {product.gst}</p>
        <div className='d-flex justify-content-between align-items-center'>
         <button onClick={()=>deleteProducts(product._id)} className='btn bg-none border-none' ><i class="fa-solid fa-trash bg-none" ></i></button>
-        <button className='btn bg-none border-none' ><i class="fa-solid fa-pen-to-square"></i></button>
-
+        <Edit product={product} getAllProducts={getAllProducts}/>
         </div>
       </Card.Body>
     </Card>

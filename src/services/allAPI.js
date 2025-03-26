@@ -12,3 +12,7 @@ export const getProduct = async()=>{
 export const deleteProduct = async(id)=>{
     return await commonAPI("DELETE",`${SERVERURL}/deleteProduct/${id}`,{})
 }
+
+export const updateProduct = async(id,reqBody)=>{
+    return await commonAPI("PUT",`${SERVERURL}/updateproduct/${id}`,reqBody)
+}

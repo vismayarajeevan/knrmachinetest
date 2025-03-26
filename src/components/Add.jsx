@@ -4,7 +4,7 @@ import { addProduct } from '../services/allAPI';
 
 
 
-const Add = () => {
+const Add = ({getAllProducts}) => {
 
     const [products,setProducts] = useState({
         name:"",price:"",description:"",gst:""
@@ -36,6 +36,7 @@ const Add = () => {
             if(result.status == 200){
                 alert("Product added successfully")
                 handleClose()
+                getAllProducts()
             }
             
             

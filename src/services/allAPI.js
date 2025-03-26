@@ -8,3 +8,7 @@ export const addProduct = async(reqBody)=>{
 export const getProduct = async()=>{
     return await commonAPI("GET",`${SERVERURL}/getProduct`,{})
 }
+
+export const deleteProduct = async(id)=>{
+    return await commonAPI("DELETE",`${SERVERURL}/deleteProduct/${id}`,{})
+}

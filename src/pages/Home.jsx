@@ -34,7 +34,7 @@ const Home = () => {
         </div>
         <div className='mt-5'>
           <div >  
-            <View allProducts={allProducts}/>
+            <View allProducts={allProducts} getAllProducts={getAllProducts}/>
             
             </div>
         </div>
